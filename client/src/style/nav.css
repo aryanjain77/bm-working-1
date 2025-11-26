@@ -1,0 +1,149 @@
+.navbar {
+    background-color: rgb(15, 19, 27);
+    position: fixed;
+    top: 5vh;
+    left: 55vh;
+    width: 50%;
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    background: linear-gradient(#070112);
+    z-index: 20;
+    padding: 28px;
+    font-family: monospace;
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-weight: 1000;
+    font-size: large;
+}
+
+.right-nav .account-options {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+.nav-item,
+.acc-item {
+    color: #dcdcdc; 
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover,
+.acc-item:hover {
+  color: #fff; 
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff; 
+  text-decoration: underline;
+}
+
+.navlist {
+    display: flex;
+    flex-direction: row; 
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size:larger;
+}
+
+h3 {
+    color: white;
+}
+
+.glass-container {
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 28px;                  /* rounded edges */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%); /* Safari support */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* soft shadow */
+    color: #fff; /* keep text visible */
+}
+
+.navbar a {
+  color: inherit;          /* inherit the white/gray from .nav-item */
+  text-decoration: none;   /* remove underline */
+}
+
+.navbar a:visited {
+  color: inherit;          /* prevent purple after click */
+}
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navlist {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-item,
+    .acc-item {
+        font-size: 0.85rem;
+    }
+
+    .navlist {
+        gap: 10px;
+    }
+}
+
+/* Mobile Phones (≤768px) */
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        flex-direction: row;  /* stack logo, links, accounts */
+        align-items: flex-start;
+        height: 6.5vh;
+        width: 100vw;
+        border-radius: 0%;
+    }
+
+    .navlist {
+        display: none;
+    }
+
+    .right-nav .account-options {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .left-nav {
+        position: absolute;
+        top: 0;
+    }
+
+    .nav-item,
+    .acc-item {
+        font-size: 0.8rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
