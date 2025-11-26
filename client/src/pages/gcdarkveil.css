@@ -1,0 +1,14 @@
+.glass-container {
+  /* background: rgba(255, 255, 255, 0.1);  */
+  background: rgba(0, 0, 0, 0.5);
+  /* rounded edges */
+  /* subtle border */
+  backdrop-filter: blur(0px) saturate(120%);
+  -webkit-backdrop-filter: blur(0px) saturate(120%);
+  /* Safari support */
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 8px 20px rgba(244, 239, 239, 0.4);
+  color: #fff;
+  /* keep text visible */
+  /* border-radius: 0%; */
+}
